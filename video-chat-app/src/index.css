@@ -22,47 +22,159 @@ a:hover {
   color: #535bf2;
 }
 
+/* Remove the default body centering that might interfere */
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  padding: 0;
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.home-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #00b4db, #0083b0);
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+.form-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 450px;
+  backdrop-filter: blur(10px);
+  margin: auto;
+}
+
+.logo-section h1 {
+  font-size: 3.5em;
+  color: #1a1a1a;
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #0083b0, #00b4db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tagline {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #eee;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+input::placeholder {
+  color: #666;
+}
+
+.creator-credit {
+  margin-top: 2rem;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Override any dark mode styles */
+@media (prefers-color-scheme: dark) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
-  a:hover {
-    color: #747bff;
+  
+  input, button, .tagline, .creator-credit {
+    color: #333;
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+input:focus {
+  border-color: #0083b0;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 131, 176, 0.1);
+}
+
+.join-button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(45deg, #0083b0, #00b4db);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.join-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 131, 176, 0.3);
+}
+
+.join-button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.creator-credit {
+  margin-top: 2rem;
+  color: #666;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 2rem;
   }
+  
+  .logo-section h1 {
+    font-size: 2.5em;
+  }
+  
+  .tagline {
+    font-size: 1rem;
+  }
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.myCallContainer {
+  width: 100vw;
+  height: 100vh;
+  background: #f5f5f5;
 }
