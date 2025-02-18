@@ -1,6 +1,6 @@
 # FaceTube - Modern Video Chat Application
 
-![FaceTube Logo](/video-chat-app/public/images/facetube-logo.png)
+[FaceTube Live site](https://facetube.netlify.app/)
 
 A sleek and user-friendly video chat application that enables instant connection through web browsers. Perfect for quick video calls, meetings, and virtual hangouts.
 
