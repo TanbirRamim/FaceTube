@@ -6,6 +6,11 @@ import cors from 'cors'
 const app = express()
 app.use(cors())
 
+// Add a basic route
+app.get('/', (req, res) => {
+  res.send('Server is running')
+})
+
 const server = createServer(app)
 const io = new Server(server, {
   cors: {

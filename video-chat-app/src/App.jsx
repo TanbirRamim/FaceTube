@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import Room from './pages/Room'
+import Room from './pages/Room'  // Make sure this matches the file name case
 
 function App() {
   return (
