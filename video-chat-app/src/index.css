@@ -338,7 +338,7 @@ button:disabled {
   background: rgba(0, 0, 0, 0.05);
   border-radius: 10px;
 }
-
+// done in the index file 
 .toggle-btn {
   flex: 1;
   padding: 10px;
