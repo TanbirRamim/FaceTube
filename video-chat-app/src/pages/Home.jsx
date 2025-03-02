@@ -6,7 +6,7 @@ export default function Home() {
   const [username, setUsername] = useState('')
   const [isCreating, setIsCreating] = useState(true)
   const navigate = useNavigate()
-
+// making it easy to understand
   const handleJoin = () => {
     if (roomId && username) {
       // Pass isCreating flag to determine if user is host
